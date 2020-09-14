@@ -11,7 +11,7 @@ type Server interface {
 	Close() error
 }
 
-func ListenAndServe(s Server) error {
+func EchoServe(s Server) error {
 	defer func() { s.Close() }()
 
 	for _, methodName := range []string{"Socket", "Bind", "Serve"} {

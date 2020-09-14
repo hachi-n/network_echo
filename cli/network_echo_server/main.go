@@ -59,7 +59,7 @@ func main() {
 				s = udp.NewUdpServer(ip, port, queueLimit)
 			}
 
-			return server.ListenAndServe(s)
+			return server.EchoServe(s)
 		},
 	}
 	err := app.Run(os.Args)
