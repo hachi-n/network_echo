@@ -43,7 +43,7 @@ func (t *TcpClient) Send(message string) (err error) {
 
 func (t *TcpClient) Recv(buf []byte) (recvMessage []byte, err error) {
 	_, _, err = syscall.Recvfrom(t.fd, buf, 0)
-	copy(recvMessage[:], buf)
+	recvMessage = buf
 	return
 }
 

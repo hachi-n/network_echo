@@ -37,6 +37,7 @@ func main() {
 			&cli.StringFlag{
 				Name:        "message, m",
 				Destination: &message,
+				Required:    true,
 			},
 			&cli.IntFlag{
 				Name:        "port, p",
